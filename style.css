@@ -1,0 +1,13 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.box:hover input{
+    width: 400px;
+}
+
+.placeholder-custom-color::placeholder {
+    color: black;
+}
