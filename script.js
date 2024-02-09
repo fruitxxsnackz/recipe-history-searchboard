@@ -23,14 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 throw "Status Error";
             }
         });
-    }
-
+    }           
     function showHistory(history) {
         var WikiData = document.getElementById('data');
-        WikiData.textContent = '';
-
+        WikiData.textContent = ‘’;
         for (let i = 0; i < history.length; i++) {
-            var divsec = document.createElement('p');
+            var divsec = document.createElement(‘p’);
+
             divsec.textContent = history[i];
             WikiData.appendChild(divsec);
         }
