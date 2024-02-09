@@ -1,4 +1,5 @@
 
+
 // Making sure functions run after HTML loads.
 document.addEventListener('DOMContentLoaded', function() {
   var pagearray = [];
@@ -39,4 +40,5 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   }
 });
+
 
