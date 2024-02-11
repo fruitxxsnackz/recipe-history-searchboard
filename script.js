@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var pagearray = [];
     var recipes = [];
 
-    // Run fetchwikipedia when button is clicked; API documentation.
+    // Run fetchwikipedia/fetchedamam when button is clicked; API documentation.
     document.getElementById('searchBtn').addEventListener('click', function () {
         var searchinput = document.getElementById('searchBarInput').value.toLowerCase();
         var api = 'https://en.wikipedia.org/w/api.php?action=query&format=json&titles='+searchinput+'&prop=extracts&exintro&origin=*';
@@ -35,11 +35,12 @@ document.addEventListener('DOMContentLoaded', function() {
         WikiData.textContent = '';
          for (let i = 0; i < history.length; i++) {
         var divsec = document.createElement('p');
-        divsec.textContent = history[i];
+        divsec.textContent = decodenoise(history[i]);
         WikiData.appendChild(divsec);
         }
     }
 
+    // fetch request to Edamam website; store received responses into array; call function to display the info.
     function fetchedamam(EdAapi) {
         fetch(EdAapi, {
           method: 'GET',
@@ -64,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       }
 
+      // function to display information from array.
       function displayedamam(recipes) {
         var recipesection = document.getElementById('recipesection');
         recipesection.innerHTML = '';
@@ -71,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
         recipes.forEach(function(recipe) {
           var addrecipediv = document.createElement('div');
           
+          // create sections for each recipe that appears when input is received.
           var Recname = document.createElement('p');
           Recname.setAttribute('class', 'Recname');
           Recname.textContent = recipe.label;
@@ -83,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
           document.getElementById('recipesection').appendChild(addrecipediv);
         
+          // show recipes when clicked and append recipes so it shows.
           Recname.addEventListener('click', function() {
             if (shoplist.style.display === 'none') {
               shoplist.style.display = 'block';
@@ -92,4 +96,12 @@ document.addEventListener('DOMContentLoaded', function() {
           recipesection.appendChild(addrecipediv);
         });
       };
+
+      // Get rid of some noise that is displayed when data is received.
+      function decodenoise(historybug) {
+        return $("<textarea/>")
+         .html(historybug)
+         .text();
+      }
+      decodenoise();
   });
