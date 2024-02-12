@@ -11,3 +11,14 @@
 .placeholder-custom-color::placeholder {
     color: black;
 }
+
+.wrapper{
+    display: flex;
+    text-align: center;
+    display: list-item;
+    justify-content: space-between;
+    
+}
+#h1{
+display: flex;
+}
