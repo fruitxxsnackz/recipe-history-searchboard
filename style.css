@@ -1,0 +1,78 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.box:hover input{
+    width: 400px;
+}
+
+.placeholder-custom-color::placeholder {
+    color: black;
+}
+
+body {
+    background-color: rgb(247, 242, 242);
+}
+
+.bg-black {
+
+}
+
+.bg-black .text-2x1 {
+text-transform: capitalize;
+}
+
+.box {
+
+}
+
+.box .w-0 {
+
+}
+
+.box .text-black-700 {
+
+}
+
+.box .text-black-700 .fa {
+
+}
+
+#data {
+    background-color: rgb(182,165,2430);
+    text: black;
+    text-align: center;
+    text-wrap: wrap;
+
+}
+
+#recipesection {
+    background-color: rgb(41, 161, 161);
+    text: black
+    text-align: center; justify;
+    text-wrap: wrap;
+    column-width: auto;
+    column-count: auto;
+    border: solid; dashed black; 
+    float: :right;
+
+
+}
+
+#searchHistory {
+    background-color: rgb(182,165,2430);
+    text: black;
+    text-align: center;
+    text-wrap: wrap;
+
+}
+
+#searchHistory h2 {
+
+}
+
+#searchHistory #historyList {
+
+}
