@@ -12,6 +12,54 @@
     color: black;
 }
 
+.dropdown {
+    position: absolute;
+    right: 0px; left: 0px;
+    background-color: white;
+}
+
+.recipeyes {
+    display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   min-height: 100%;
+    padding: 20px;
+}
+
+.recipesclasslist {
+    display: flex;
+    margin: 10px;
+    border: 1px solid white;
+    border-radius: 8px;
+    width: 50%;
+}
+
+.recipesclasslist img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.recipein {
+    padding: 10px;
+}
+
+.recipeheader {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.ingredients {
+    font-size: 16px;
+    color: #666;
+}
+
+#dropdownmenu:hover {
+ background-color: white;
+}
+
 .wrapper{
     display: flex;
     text-align: center;
