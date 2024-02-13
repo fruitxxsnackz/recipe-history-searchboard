@@ -1,4 +1,5 @@
 
+
 *{
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -139,11 +140,55 @@ body {
     border-spacing: 8px;
 }
 
+
+#searchEl {
+    position: relative;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0; top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: grey; 
+  }
+
+.modalsty {
+    background-color: rgb(182,165,243);
+    margin: 15% auto; 
+    padding: 20px;
+    border: 2px solid black;
+    width: 80%;
+  }
+
+  .Elink {
+ color: purple;
+  }
+
+  .exitbox {
+    color: teal;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+
 /* Media query for screens smaller than 600px */
 @media only screen and (max-width: 600px) {
     .recipesclasslist {
         width: 100%; /* Adjust width to fill the entire screen */
     }
+
 
     .recipesclasslist img {
         width: 100px; /* Decrease image width for smaller screens */
@@ -151,13 +196,16 @@ body {
         border-radius: 10px; /* Adjust border-radius for smaller screens */
     }
 
+
     .recipeheader {
         font-size: 16px; /* Decrease font size for smaller screens */
     }
 
+
     .ingredients {
         font-size: 14px; /* Decrease font size for smaller screens */
     }
+
 
     .box:hover input{
         width: 100px;
