@@ -1,3 +1,4 @@
+
 *{
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -30,15 +31,28 @@
 .recipesclasslist {
     display: flex;
     margin: 10px;
-    border: 1px solid white;
+    border: 2px solid black;
     border-radius: 8px;
     width: 50%;
+    animation-duration: 2s;
+    animation-name: bounce;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
 }
 
 .recipesclasslist img {
     width: 150px;
     height: 150px;
     border-radius: 10px 0px 0px 10px;
+    justify-content: center;
+    align-content: center;
+    margin-top: 2%;
+    margin: auto;
+    margin-left: 2%;
+    animation-duration: 1s;
+    animation-name: bounce;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
 }
 
 .recipein {
@@ -49,13 +63,79 @@
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 5px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: rgb(42, 187, 187);
+    text-align: center; justify;
+    column-width: auto;
+    column-gap: normal;
+    position: static;
+    text-shadow: 2px 2px 2px lightgray;
+    white-space: normal;
+    overflow-wrap: break-word;
+    letter-spacing: normal;
 }
 
 .ingredients {
     font-size: 16px;
-    color: #666;
+    color: black;
+    border: 2px solid black;
+    border-radius: 8px; 
+    border-color: black;
+    background-color: rgb(182,165,243);
+    position: static;
+    text-transform: full-width;
+    white-space: normal;
+    overflow-wrap: break-word;
+    letter-spacing: normal;
 }
 
 #dropdownmenu:hover {
  background-color: white;
 }
+
+body {
+    background-color: rgba(228, 226, 226, 0.959);
+}
+
+#dataret {
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 8px;
+    border-spacing: 8px;
+    border-block-width: 3px;
+    border-style: inset;
+    text-align: center;
+    text: black;
+    text-wrap: wrap;
+    text-justify: auto;
+    overflow-wrap: break-word;
+    position: static;
+    white-space: normal;
+    letter-spacing: normal;
+    column-width: auto;
+    background-color: rgb(182,165,243);
+    text-transform: full-width;
+    block-size: auto, fit-content; 
+    writing-mode: horizontal-tb;
+    align-content: space-evenly;
+    display: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+#searchHistory {
+    position: static;
+    justify-content: center;
+    display: center;
+    text-align: center;
+    text: black;
+    column-width: auto;
+    align-content: center;
+    border: 2px solid black;
+    border-radius: 8px;
+    border-spacing: 8px;
+}
+
