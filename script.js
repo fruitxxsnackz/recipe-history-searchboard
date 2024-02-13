@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded",function() {
       var searchinput = document.getElementById('searchbarinput').value.toLowerCase();
       var wikiapi = "https://en.wikipedia.org/w/api.php?action=query&format=json&titles="+searchinput+"&prop=extracts&exintro&origin=*";
       var EdAapi = "https://api.edamam.com/api/recipes/v2?type=public&q="+searchinput+"&app_id=5580467d&app_key=717fcc61183eb09ca933fe3ddf73c660";
-
+      localStorage.setItem('Search-History', JSON.stringify(searchinput));
       fetchwikipedia(wikiapi);
       fetchedamam(EdAapi);
   });
@@ -196,28 +196,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-//take user input and save in local storage 
-localStorage.setItem("search history", searchBarInput)
-
-//take input in Local Stroage from above and save newest request at the end
-function saveToLocalStorage(searchBarInputvalue) {
-  let history = JSON.parse(localStorage.getItem(searchBarInput.value))
-history.push(searchBarInput)
-localStorage.setItem('searchBarInput', JSON.stringify(history));
-}
-
+const listItem = document.createElement('li');
 //Set up and display search history, clearing existing content
 function updateSearchHistory() {
   var historyList = document.getElementById('historyList');
   historyList.innerHTML = '';
-
-  //Add search history list items
-
-  history.foreach(function (addToList) {
-    var historyListItem = document.createElement('li');
-    historyListItem.textContent = addToList;
-    historyList.appendChild(historyListItem);
-});
+  listItem.innerHTML = '';
+  listItem.innerHTML = JSON.parse(localStorage.getItem('Search-History'))
+  historyList.appendChild(listItem);
+  console.log(listItem.innerHTML);
 }
-console.log(searchBarInput)
-
+updateSearchHistory();
