@@ -26,7 +26,7 @@
     </header>
      <!--search bar with tailwind-->
     <article class="w-full flex justify-center items-center my-20">
-        <div class="box flex items-center px-10 py-2 bg-teal-500 rounded-full">
+        <div class="box flex items-center px-10 py-2 bg-teal-500 rounded-full" id="searchEl"> 
             <input class="outline-none border-none font-medium w-64 px-4 bg-transparent text-white" type="text" id="searchbarinput" placeholder="Search for recipes!">
             <div class="dropdown mt-1 rounded-md hidden" id="dropdownmenu"></div>
             <button class="text-white">
@@ -34,16 +34,22 @@
             </button>
         </div>
       </article>
+     <!-- Api data containers -->
     <section class="flex flex-wrap md:flex-nowrap" id="pediasection">
     <section class="flex-1 p-4 max-w-full md:max-w-1/2" id="dataret"></section>
     <section  class="justify-center flex flex-col items-center min-h-full p-5 w-2/3" id="recipesection"></section>
     </section>
-  
-<div id="searchHistory">
-<h2>Search History</h2>
-<ul id="historyList"></ul>
-</div>
-  
+
+    <!-- Modal pop up box -->
+   <section class="modal" id="edamodal">
+   <div class="modalsty">
+   <div class="exitbox">&times;</div>
+   <h3>Nutrition Facts Alert!</h3>
+   <p>Visit the original Edamam website to view the full nutrition facts rundown.</p>
+   <a class="Elink" href="https://www.edamam.com/recipes/" target="_blank">Visit Edamam's website</a>
+   </div>
+   </section>
+
     <script src="script.js" defer></script>  
 </body>
 
