@@ -2,10 +2,10 @@
 document.addEventListener("DOMContentLoaded",function() {
   var modal = document.getElementById("edamodal");
   var nutrm = document.getElementsByClassName("exitbox")[0];
-  // Popup modal after 30 sec.
+  // Popup modal after 10 sec.
   setTimeout(function() {
     document.getElementById('edamodal').style.display = 'block';
-  }, 30000); 
+  }, 10000); 
   nutrm.onclick = function() {
     modal.style.display = "none"; }
   window.onclick = function(event) {
