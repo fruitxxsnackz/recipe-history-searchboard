@@ -67,7 +67,7 @@
     border: 2px solid black;
     border-radius: 8px;
     background-color: rgb(42, 187, 187);
-    text-align: center; justify;
+    text-align: center; justify-content: center;
     column-width: auto;
     column-gap: normal;
     position: static;
@@ -107,7 +107,7 @@ body {
     border-block-width: 3px;
     border-style: inset;
     text-align: center;
-    text: black;
+    color: black;
     text-wrap: wrap;
     text-justify: auto;
     overflow-wrap: break-word;
@@ -132,7 +132,7 @@ body {
     justify-content: center;
     display: center;
     text-align: center;
-    text: black;
+    color: black;
     column-width: auto;
     align-content: center;
     border: 2px solid black;
