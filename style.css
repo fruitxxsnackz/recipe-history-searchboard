@@ -180,10 +180,7 @@ body {
     text-decoration: none;
     cursor: pointer;
   }
-  
-
-
-/* Media query for screens smaller than 600px */
+ /* Media query for screens smaller than 600px */
 @media only screen and (max-width: 600px) {
     .recipesclasslist {
         width: 100%; /* Adjust width to fill the entire screen */
@@ -210,4 +207,6 @@ body {
     .box:hover input{
         width: 100px;
     }
-}
+} 
+
+

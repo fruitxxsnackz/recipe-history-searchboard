@@ -107,12 +107,12 @@ document.addEventListener("DOMContentLoaded",function() {
     decodeHTMLEntities();
  });
 
- //Local Storage
+ //Local Storage Section
+
  var clickedSearchTerm = '';
-
-
  // Get the input element
 var searchBarInput = document.getElementById('searchbarinput');
+
 // Add an event listener to the search button to save input value to local storage
 document.getElementById('searchBtn').addEventListener('click', function() {
    saveToLocalStorage(searchBarInput.value);
@@ -125,10 +125,12 @@ document.getElementById('searchBtn').addEventListener('click', function() {
    localStorage.setItem('searchBarInput', JSON.stringify(history));
    updateSearchHistory();
 }
+
 function clearSearchHistory() {
    localStorage.removeItem('searchBarInput');
    updateSearchHistory(); // Update the displayed search history
  }
+
  //Set up and display search history, clearing existing content
  function updateSearchHistory() {
    var historyList = document.getElementById('historyList');
@@ -145,37 +147,24 @@ function clearSearchHistory() {
        history.forEach(function(searchTerm) {
          var historyListItem = document.createElement('li');
          historyListItem.textContent = searchTerm;
-           // Add click event listener to each history item
+      // Modify the event listener to show a prompt when a search term is clicked    
      historyListItem.addEventListener('click', function() {
-       searchBarInput.value = searchTerm;
-       clickedSearchTerm = searchTerm; // Store clicked search term
-       console.log('Clicked search term:', searchTerm); // Debugging
-       performSearch(searchTerm);
+      var confirmSearch = confirm("" + searchTerm + " has been added to your search bar!");
+      if (confirmSearch) {
+          searchBarInput.value = searchTerm;
+          clickedSearchTerm = searchTerm; // Store clicked search term
+          window.scrollTo(0, 0); // Scroll to the top of the page
+        }
      });
          historyList.appendChild(historyListItem);
        });
      } else {
        searchHistorySection.style.display = 'none'; // Hide the search history section
-    
    }
    }
- // Function to perform search
-function performSearch(searchTerm) {
-  
-   console.log('Performing search for:', searchTerm);
- }
 
-// Function to handle search button click
-function handleSearchBtnClick() {
-   if (clickedSearchTerm !== '') {
-     performSearch(clickedSearchTerm); // Perform search with clicked search term
-   }
- }
  // Call the function to update search history
  updateSearchHistory();
- // Event listener to handle click event on the search button
-searchBtn.addEventListener('click', handleSearchBtnClick);
-
 
 // Event listener to detect when the local storage is cleared
 window.addEventListener('storage', function(event) {
